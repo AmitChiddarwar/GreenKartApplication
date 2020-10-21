@@ -13,6 +13,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterTest;
@@ -80,9 +81,11 @@ public class BasePage {
 		if (os.contains("linux")) {
 
 			if (browserName.equals("Chrome")) {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless"); //should be enabled for Jenkins
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "/DriverFolder/Chrome_Driver86_linux/chromedriver");
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(options);
 			}
 
 			else if (browserName.equals("Firefox")) {

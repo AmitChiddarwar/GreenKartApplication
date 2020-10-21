@@ -21,21 +21,21 @@ public class orderPageTest2 extends BasePage {
 		extentTest = extent.startTest(result.getMethod().getQualifiedName());
 	}
 	
-	@Test(priority=0)
+	@Test
 	public void addItem3IntoTheCart() {
 		System.out.println(configProp.getProperty("Item3"));
 		op.enterItem(configProp.getProperty("Item3"));
 		op.clickOnSearchBtn();
 	}
 	
-	@Test(priority=1)
-	public void addItem5IntoTheCart() {
-		System.out.println(configProp.getProperty("Item5"));
-		op.enterItem(configProp.getProperty("Item5"));
-		op.clickOnSearchBtn();
-	}
+//	@Test
+//	public void addItem5IntoTheCart() {
+//		System.out.println(configProp.getProperty("Item5"));
+//		op.enterItem(configProp.getProperty("Item5"));
+//		op.clickOnSearchBtn();
+//	}
 	
-	@Test(dependsOnMethods = "addItem5IntoTheCart")
+	@Test
 	public void addItem4IntoTheCart() {
 		System.out.println(configProp.getProperty("Item4"));
 		op.enterItem(configProp.getProperty("Item4"));

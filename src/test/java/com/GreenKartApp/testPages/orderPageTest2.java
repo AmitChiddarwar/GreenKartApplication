@@ -28,13 +28,7 @@ public class orderPageTest2 extends BasePage {
 		op.clickOnSearchBtn();
 	}
 	
-//	@Test
-//	public void addItem5IntoTheCart() {
-//		System.out.println(configProp.getProperty("Item5"));
-//		op.enterItem(configProp.getProperty("Item5"));
-//		op.clickOnSearchBtn();
-//	}
-	
+
 	@Test
 	public void addItem4IntoTheCart() {
 		System.out.println(configProp.getProperty("Item4"));

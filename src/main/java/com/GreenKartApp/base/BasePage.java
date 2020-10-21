@@ -82,9 +82,9 @@ public class BasePage {
 
 			if (browserName.equals("Chrome")) {
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless"); //should be enabled for Jenkins
+//				options.addArguments("--headless"); //should be enabled for Jenkins
 				System.setProperty("webdriver.chrome.driver",
-						System.getProperty("user.dir") + "/DriverFolder/Chrome_Driver86_linux/chromedriver");
+						System.getProperty("user.dir") + "/DriverFolder/Chrome_Driver86_linux/chromedriver_linux");
 				driver = new ChromeDriver(options);
 			}
 
